@@ -120,7 +120,7 @@ const mutation = useMutation<any, Error, UpdateStatusParams>({
           <p className="text-gray-500">Manage and respond to reported power issues</p>
         </div>
         <div className="flex flex-col sm:flex-row gap-2">
-          <Button className="flex items-center gap-2">
+          <Button className="flex items-center gap-2 border-black">
             <Link to="/report-fault">
             Report Fault
             </Link>
