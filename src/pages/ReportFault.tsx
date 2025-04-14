@@ -43,7 +43,7 @@ export default function FaultReportForm() {
     setIsSubmitting(true);
     
     try {
-     await axios.post("/api/report-fault", formData, {
+     await axios.post("/backend/report-fault", formData, {
         headers: {
           "Content-Type": "application/json"
         }
