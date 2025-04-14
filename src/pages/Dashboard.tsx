@@ -11,7 +11,7 @@ import { toast } from "sonner";
 import { Link } from "react-router-dom"
 // API client function to fetch power statuses
 const fetchPowerStatuses = async () => {
-  const response = await axios.get('/backend/report-fault', {
+  const response = await axios.get('api/report-fault', {
     headers: {
       'Content-Type': 'application/json'
     }
@@ -79,7 +79,7 @@ export default function Dashboard() {
   console.log("Filtered issues:", filteredIssues);
   const updateIssueStatus = async (id:number, newStatus:string) => {
     try {
-      const response = await axios.put(`/backend/report-fault/updateStatus/${id}`, { status: newStatus }, {
+      const response = await axios.put(`api/report-fault/updateStatus/${id}`, { status: newStatus }, {
         headers: {
           'Content-Type': 'application/json',
         },

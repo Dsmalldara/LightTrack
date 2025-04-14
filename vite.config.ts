@@ -11,16 +11,14 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-
-server: {
-  proxy: {
-    '/backend': {
-      target: 'https://light-tracker-backend.onrender.com',
-      changeOrigin: true,
-      secure: true,
-      rewrite: path => path.replace(/^\/backend/, '/api'),
+  server: {
+    proxy: {
+      '/api': {
+        target: 'https://light-tracker-backend.onrender.com',
+        changeOrigin: true,
+        secure: true,
+        rewrite: path => path.replace(/^\/api/, '/api'),
+      },
     },
   },
-},
-
 })
